@@ -10,14 +10,16 @@ export const HeroCard = ({
      characters 
 }) => {
     
-    const imagePath = `/assets/${id}.jpg`
+    const imagePath = `/assets/${id}.jpg`                               // Imagenes en carpeta publicacion
+    const heroImages = require.context('../../assets', true)            // Si ponemos las imagenes el directorio en src
 
     return (
 
         <div className="card mb-3 animate__animated animate__fadeIn" style={{maxwidth: "540px"}}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={ imagePath } className="card-img" alt={ superhero } />
+                    {/* <img src={ imagePath } className="card-img" alt={ superhero } /> */}
+                    <img src={heroImages(`./${id}.jpg`)} className="card-img" alt={ superhero } />
                 </div>
                 <div className="col-md-8">
                 <div className="card-body">

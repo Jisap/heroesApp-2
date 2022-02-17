@@ -2,6 +2,8 @@ import React, { useMemo } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { getHeroById } from '../../selectors/getHeroById'
 
+const heroImages = require.context('../../assets', true)            // Si ponemos las imagenes el directorio en src
+
 
 export const Hero = () => {
 
@@ -21,12 +23,13 @@ export const Hero = () => {
 
     const { id, superhero, publisher, alter_ego, first_appearance, characters } = hero
     
-    const imagePath = `/assets/${ id }.jpg`
+    const imagePath = `/assets/${ id }.jpg` // Si la imagen esta en la carpeta de public
     
     return (
         <div className="row mt-5">
             <div className="col-4">
-                <img src={ imagePath } alt={ superhero } className="img-thumbnail animate__animated animate__fadeInLeft"/>
+                {/* <img src={ imagePath } alt={ superhero } className="img-thumbnail animate__animated animate__fadeInLeft"/> */}
+                <img src={heroImages(`./${heroeId}.jpg`)} alt={ superhero } className="img-thumbnail animate__animated animate__fadeInLeft"/>
             </div>
             <div className="col-8">
                 <h3>{ superhero }</h3>

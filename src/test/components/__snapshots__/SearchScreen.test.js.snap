@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <SearchScreen /> debe de mostrarse correctamente con valores por defecto 1`] = `
+Array [
+  <h1>
+    Búsquedas
+  </h1>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Buscar
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Buscar un héroe"
+          type="text"
+          value=""
+        />
+        <div
+          className="d-grid gap-2"
+        >
+          <button
+            className="btn btn-outline-primary mt-3"
+            type="submit"
+          >
+            Buscar...
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Resultados
+      </h4>
+      <h4 />
+      <div
+        className="alert alert-info"
+      >
+        Buscar un héroe
+      </div>
+    </div>
+  </div>,
+]
+`;

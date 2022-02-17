@@ -10,10 +10,10 @@ export const SearchScreen = () => {
     
     const navigate = useNavigate()
     const location = useLocation()  // hook que nos permite obtener un objeto con el pathname y los queryparams ( q=search )
-    const { q = '' } = queryString.parse(location.search) // Separamos los queryParams  y nos quedamos solo con q que es el termino de la busqueda
+    const { q = '' } = queryString.parse(location.search) // Identificamos los queryParams y nos quedamos solo con q que es el termino de la busqueda
    
     // Valores del form. - funcion que modifica esos valores
-    const [ formValues, handleInputChange ] = useForm({searchText: q })
+    const [ formValues, handleInputChange ] = useForm({searchText: q }) // Asociamos q con searchText, value del formulario
     const { searchText } = formValues   // Extraemos el valor del formulario que nos interesa, el searchText
 
     const handleSearch = (e) => {   // Cuando se haga click en el submit se llama a handleSearch y se construyen
